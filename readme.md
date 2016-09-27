@@ -26,6 +26,7 @@ The app has two main routes:
             NOTE: In next versions this well be integrated with the main UI.
             
 And then, three more steps to make this shit work (That I think):
+    
     1.  Write your access to de database in the archive:
         "config/database.php"
     2.  Run the shell script (that will ask you for user and password 

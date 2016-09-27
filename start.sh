@@ -6,7 +6,7 @@ echo -n "enter database password: "
 read password
 
 mysql -u $username -p$password -e 'CREATE DATABASE geo_simulator;'
-mysql -u $username -p$password -p$password geo_simulator < geo_simulator.sql
+mysql -u $username -p$password -b geo_simulator < geo_simulator.sql
 echo "Loaded database"
 
 npm install

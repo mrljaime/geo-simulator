@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="15ddba86-76c8-4b51-af46-9d054df309f4" name="Default" comment="" />
+    <list default="true" id="15ddba86-76c8-4b51-af46-9d054df309f4" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/markers/car.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/markers/driver.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/database.php" afterPath="$PROJECT_DIR$/config/database.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webSocket.js" afterPath="$PROJECT_DIR$/webSocket.js" />
+    </list>
     <ignored path="geo-simulator.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -35,68 +49,82 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="IndexController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="IndexController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/IndexController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8169491">
-              <caret line="217" column="12" selection-start-line="217" selection-start-column="12" selection-end-line="217" selection-end-column="12" />
+            <state vertical-scroll-proportion="-12.0">
+              <caret line="138" column="49" selection-start-line="138" selection-start-column="49" selection-end-line="138" selection-end-column="49" />
               <folding>
                 <element signature="e#123#159#0#PHP" expanded="true" />
-                <marker date="1474910793698" expanded="true" signature="1130:1189" placeholder="SELECT max_c... aa_app" />
-                <marker date="1474910793698" expanded="true" signature="1261:1287" placeholder="SELECT id FR... aa_entities" />
-                <marker date="1474910793698" expanded="true" signature="1261:1309" placeholder="SELECT id FR... aa_entities" />
-                <marker date="1474910793698" expanded="true" signature="1261:1316" placeholder="SELECT id FR... aa_entities" />
-                <marker date="1474910793698" expanded="true" signature="1261:1343" placeholder="SELECT id FR... aa_entities" />
-                <marker date="1474910793698" expanded="true" signature="1410:1465" placeholder="SELECT id FR... aa_entities" />
-                <marker date="1474910793698" expanded="true" signature="1410:1490" placeholder="SELECT id FR... aa_entities" />
-                <marker date="1474910793698" expanded="true" signature="1826:1847" placeholder="DELETE FROM " />
-                <marker date="1474910793698" expanded="true" signature="1990:2023" placeholder="INSERT INTO cc_active... " />
-                <marker date="1474910793698" expanded="true" signature="1990:2048" placeholder="INSERT INTO cc_active... " />
-                <marker date="1474910793698" expanded="true" signature="2308:2366" placeholder="INSERT INTO cc_active... " />
-                <marker date="1474910793698" expanded="true" signature="2730:2882" placeholder="SELECT id, n... aa_entities" />
-                <marker date="1474910793698" expanded="true" signature="3073:3946" placeholder="SELECT * FRO... id" />
-                <marker date="1474910793698" expanded="true" signature="3125:3306" placeholder="SELECT e.id,... " />
-                <marker date="1474910793698" expanded="true" signature="3125:3861" placeholder="SELECT e.id,... aa_entities" />
-                <marker date="1474910793698" expanded="true" signature="3817:3861" placeholder="SELECT e.id,... aa_entities" />
-                <marker date="1474910793698" expanded="true" signature="4479:4602" placeholder="SELECT id, r... aa_entities" />
-                <marker date="1474910793698" expanded="true" signature="4904:4996" placeholder="SELECT FROM bb_points" />
-                <marker date="1474910793698" expanded="true" signature="4904:5025" placeholder="SELECT MAX(i... bb_points" />
-                <marker date="1474910793698" expanded="true" signature="4904:5026" placeholder="SELECT MAX(i... bb_points" />
-                <marker date="1474910793698" expanded="true" signature="5214:5253" placeholder="UPDATE aa_en... " />
-                <marker date="1474910793698" expanded="true" signature="5214:5268" placeholder="UPDATE aa_en... " />
-                <marker date="1474910793698" expanded="true" signature="5214:5290" placeholder="UPDATE aa_en... " />
-                <marker date="1474910793698" expanded="true" signature="5214:5296" placeholder="UPDATE aa_en... " />
-                <marker date="1474910793698" expanded="true" signature="5418:5504" placeholder="SELECT FROM bb_points" />
-                <marker date="1474910793698" expanded="true" signature="5418:5518" placeholder="SELECT MIN()... bb_points" />
-                <marker date="1474910793698" expanded="true" signature="5418:5521" placeholder="SELECT MIN(i... bb_points" />
-                <marker date="1474910793698" expanded="true" signature="5418:5522" placeholder="SELECT MIN(i... bb_points" />
-                <marker date="1474910793698" expanded="true" signature="5698:5737" placeholder="UPDATE aa_en... " />
-                <marker date="1474910793698" expanded="true" signature="5698:5751" placeholder="UPDATE aa_en... " />
-                <marker date="1474910793698" expanded="true" signature="5698:5755" placeholder="UPDATE aa_en... " />
-                <marker date="1474910793698" expanded="true" signature="5698:5783" placeholder="UPDATE aa_en... " />
-                <marker date="1474910793698" expanded="true" signature="5959:6053" placeholder="SELECT lat, bb_points" />
+                <marker date="1474947910631" expanded="true" signature="657:743" placeholder="SELECT state... aa_app" />
+                <marker date="1474947910631" expanded="true" signature="1557:1616" placeholder="SELECT max_c... aa_app" />
+                <marker date="1474947910631" expanded="true" signature="1688:1714" placeholder="SELECT id FR... aa_entities" />
+                <marker date="1474947910631" expanded="true" signature="1688:1736" placeholder="SELECT id FR... aa_entities" />
+                <marker date="1474947910631" expanded="true" signature="1688:1743" placeholder="SELECT id FR... aa_entities" />
+                <marker date="1474947910631" expanded="true" signature="1688:1770" placeholder="SELECT id FR... aa_entities" />
+                <marker date="1474947910631" expanded="true" signature="1837:1892" placeholder="SELECT id FR... aa_entities" />
+                <marker date="1474947910631" expanded="true" signature="1837:1917" placeholder="SELECT id FR... aa_entities" />
+                <marker date="1474947910631" expanded="true" signature="2253:2274" placeholder="DELETE FROM " />
+                <marker date="1474947910631" expanded="true" signature="2417:2450" placeholder="INSERT INTO cc_active... " />
+                <marker date="1474947910631" expanded="true" signature="2417:2475" placeholder="INSERT INTO cc_active... " />
+                <marker date="1474947910631" expanded="true" signature="2735:2793" placeholder="INSERT INTO cc_active... " />
+                <marker date="1474947910631" expanded="true" signature="3157:3309" placeholder="SELECT id, n... aa_entities" />
+                <marker date="1474947910631" expanded="true" signature="3487:4244" placeholder="SELECT * FRO... id" />
+                <marker date="1474947910631" expanded="true" signature="3504:3658" placeholder="SELECT e.id,... " />
+                <marker date="1474947910631" expanded="true" signature="3504:4182" placeholder="SELECT e.id,... aa_entities" />
+                <marker date="1474947910631" expanded="true" signature="3504:4244" placeholder="SELECT e.id,... " />
+                <marker date="1474947910631" expanded="true" signature="4138:4182" placeholder="SELECT e.id,... aa_entities" />
+                <marker date="1474947910631" expanded="true" signature="4862:4894" placeholder="SELECT state... aa_app" />
+                <marker date="1474947910631" expanded="true" signature="5179:5302" placeholder="SELECT id, r... aa_entities" />
+                <marker date="1474947910631" expanded="true" signature="5604:5696" placeholder="SELECT FROM bb_points" />
+                <marker date="1474947910631" expanded="true" signature="5604:5725" placeholder="SELECT MAX(i... bb_points" />
+                <marker date="1474947910631" expanded="true" signature="5604:5726" placeholder="SELECT MAX(i... bb_points" />
+                <marker date="1474947910631" expanded="true" signature="5914:5953" placeholder="UPDATE aa_en... " />
+                <marker date="1474947910631" expanded="true" signature="5914:5968" placeholder="UPDATE aa_en... " />
+                <marker date="1474947910631" expanded="true" signature="5914:5990" placeholder="UPDATE aa_en... " />
+                <marker date="1474947910631" expanded="true" signature="5914:5996" placeholder="UPDATE aa_en... " />
+                <marker date="1474947910631" expanded="true" signature="6118:6204" placeholder="SELECT FROM bb_points" />
+                <marker date="1474947910631" expanded="true" signature="6118:6218" placeholder="SELECT MIN()... bb_points" />
+                <marker date="1474947910631" expanded="true" signature="6118:6221" placeholder="SELECT MIN(i... bb_points" />
+                <marker date="1474947910631" expanded="true" signature="6118:6222" placeholder="SELECT MIN(i... bb_points" />
+                <marker date="1474947910631" expanded="true" signature="6398:6437" placeholder="UPDATE aa_en... " />
+                <marker date="1474947910631" expanded="true" signature="6398:6451" placeholder="UPDATE aa_en... " />
+                <marker date="1474947910631" expanded="true" signature="6398:6455" placeholder="UPDATE aa_en... " />
+                <marker date="1474947910631" expanded="true" signature="6398:6483" placeholder="UPDATE aa_en... " />
+                <marker date="1474947910631" expanded="true" signature="6659:6753" placeholder="SELECT lat, bb_points" />
+                <marker date="1474947910631" expanded="true" signature="7746:7836" placeholder="UPDATE aa_ap... " />
+                <marker date="1474947910631" expanded="true" signature="8241:8275" placeholder="UPDATE aa_ap... " />
+                <marker date="1474947910631" expanded="true" signature="8241:8281" placeholder="UPDATE aa_ap... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <file leaf-file-name=".env" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.env">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.0">
-              <caret line="21" column="28" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="28" />
-              <folding>
-                <element signature="e#7#457#0#PHP" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="0.0">
+              <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/6deb3cd3-3fe9-4f9c-b96e-b2be170dedcd/console.sql">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-3.3333333">
+              <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="database.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/database.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.0">
+              <caret line="60" column="46" selection-start-line="60" selection-start-column="46" selection-end-line="60" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -106,7 +134,37 @@
         <entry file="file://$PROJECT_DIR$/webSocket.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+              <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.45833334">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/3a8a9b8c-b7f1-4ccf-935c-2ed508339381/console.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-1.2">
+              <caret line="2" column="36" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/6deb3cd3-3fe9-4f9c-b96e-b2be170dedcd/console.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.2">
+              <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -115,45 +173,35 @@
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="27.333334">
-              <caret line="103" column="5" selection-start-line="103" selection-start-column="5" selection-end-line="103" selection-end-column="5" />
-              <folding>
-                <element signature="n#style#0;n#span#1;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#4;n#div#1;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PdoUtil.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Util/PdoUtil.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="51" column="26" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
-              <folding>
-                <element signature="e#112#147#0#PHP" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="-10.518518">
+              <caret line="348" column="37" selection-start-line="348" selection-start-column="37" selection-end-line="348" selection-end-column="37" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/resources/views/inde.blade.php" />
-        <option value="$PROJECT_DIR$/.env" />
-        <option value="$PROJECT_DIR$/config/database.php" />
         <option value="$PROJECT_DIR$/.env.example" />
         <option value="$PROJECT_DIR$/app/Console/Kernel.php" />
         <option value="$PROJECT_DIR$/app/Util/PdoUtil.php" />
-        <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/webSocket.js" />
+        <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/resources/views/index.blade.php" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/6deb3cd3-3fe9-4f9c-b96e-b2be170dedcd/console.sql" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/IndexController.php" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/3a8a9b8c-b7f1-4ccf-935c-2ed508339381/console.sql" />
+        <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/config/database.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -176,7 +224,7 @@
     <option name="width" value="1319" />
     <option name="height" value="772" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -202,6 +250,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -230,51 +279,27 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="geo-simulator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="geo-simulator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="geo-simulator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="geo-simulator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="/usr/bin/node" />
+    <property name="Console.TableResult.DefaultCopyAction" value="SQL Insert Statements" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/storage/app/public/images/markers" />
+    </key>
   </component>
   <component name="RestClientSettings">
     <option name="REQUEST_HISTORY">
@@ -424,17 +449,17 @@
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921174" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26237234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28593507" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2670856" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299293" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -456,42 +481,157 @@
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/IndexController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+          <caret line="216" column="12" selection-start-line="216" selection-start-column="12" selection-end-line="216" selection-end-column="12" />
+          <folding>
+            <element signature="e#123#159#0#PHP" expanded="true" />
+            <marker date="1474947910631" expanded="true" signature="657:743" placeholder="SELECT state... aa_app" />
+            <marker date="1474947910631" expanded="true" signature="1557:1616" placeholder="SELECT max_c... aa_app" />
+            <marker date="1474947910631" expanded="true" signature="1688:1714" placeholder="SELECT id FR... aa_entities" />
+            <marker date="1474947910631" expanded="true" signature="1688:1736" placeholder="SELECT id FR... aa_entities" />
+            <marker date="1474947910631" expanded="true" signature="1688:1743" placeholder="SELECT id FR... aa_entities" />
+            <marker date="1474947910631" expanded="true" signature="1688:1770" placeholder="SELECT id FR... aa_entities" />
+            <marker date="1474947910631" expanded="true" signature="1837:1892" placeholder="SELECT id FR... aa_entities" />
+            <marker date="1474947910631" expanded="true" signature="1837:1917" placeholder="SELECT id FR... aa_entities" />
+            <marker date="1474947910631" expanded="true" signature="2253:2274" placeholder="DELETE FROM " />
+            <marker date="1474947910631" expanded="true" signature="2417:2450" placeholder="INSERT INTO cc_active... " />
+            <marker date="1474947910631" expanded="true" signature="2417:2475" placeholder="INSERT INTO cc_active... " />
+            <marker date="1474947910631" expanded="true" signature="2735:2793" placeholder="INSERT INTO cc_active... " />
+            <marker date="1474947910631" expanded="true" signature="3157:3309" placeholder="SELECT id, n... aa_entities" />
+            <marker date="1474947910631" expanded="true" signature="3487:4244" placeholder="SELECT * FRO... id" />
+            <marker date="1474947910631" expanded="true" signature="3504:3658" placeholder="SELECT e.id,... " />
+            <marker date="1474947910631" expanded="true" signature="3504:4182" placeholder="SELECT e.id,... aa_entities" />
+            <marker date="1474947910631" expanded="true" signature="3504:4244" placeholder="SELECT e.id,... " />
+            <marker date="1474947910631" expanded="true" signature="4138:4182" placeholder="SELECT e.id,... aa_entities" />
+            <marker date="1474947910631" expanded="true" signature="4862:4894" placeholder="SELECT state... aa_app" />
+            <marker date="1474947910631" expanded="true" signature="5179:5302" placeholder="SELECT id, r... aa_entities" />
+            <marker date="1474947910631" expanded="true" signature="5604:5696" placeholder="SELECT FROM bb_points" />
+            <marker date="1474947910631" expanded="true" signature="5604:5725" placeholder="SELECT MAX(i... bb_points" />
+            <marker date="1474947910631" expanded="true" signature="5604:5726" placeholder="SELECT MAX(i... bb_points" />
+            <marker date="1474947910631" expanded="true" signature="5914:5953" placeholder="UPDATE aa_en... " />
+            <marker date="1474947910631" expanded="true" signature="5914:5968" placeholder="UPDATE aa_en... " />
+            <marker date="1474947910631" expanded="true" signature="5914:5990" placeholder="UPDATE aa_en... " />
+            <marker date="1474947910631" expanded="true" signature="5914:5996" placeholder="UPDATE aa_en... " />
+            <marker date="1474947910631" expanded="true" signature="6118:6204" placeholder="SELECT FROM bb_points" />
+            <marker date="1474947910631" expanded="true" signature="6118:6218" placeholder="SELECT MIN()... bb_points" />
+            <marker date="1474947910631" expanded="true" signature="6118:6221" placeholder="SELECT MIN(i... bb_points" />
+            <marker date="1474947910631" expanded="true" signature="6118:6222" placeholder="SELECT MIN(i... bb_points" />
+            <marker date="1474947910631" expanded="true" signature="6398:6437" placeholder="UPDATE aa_en... " />
+            <marker date="1474947910631" expanded="true" signature="6398:6451" placeholder="UPDATE aa_en... " />
+            <marker date="1474947910631" expanded="true" signature="6398:6455" placeholder="UPDATE aa_en... " />
+            <marker date="1474947910631" expanded="true" signature="6398:6483" placeholder="UPDATE aa_en... " />
+            <marker date="1474947910631" expanded="true" signature="6659:6753" placeholder="SELECT lat, bb_points" />
+            <marker date="1474947910631" expanded="true" signature="7746:7836" placeholder="UPDATE aa_ap... " />
+            <marker date="1474947910631" expanded="true" signature="8241:8275" placeholder="UPDATE aa_ap... " />
+            <marker date="1474947910631" expanded="true" signature="8241:8281" placeholder="UPDATE aa_ap... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="28" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="28" />
+          <folding>
+            <element signature="e#7#457#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/6deb3cd3-3fe9-4f9c-b96e-b2be170dedcd/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webSocket.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="103" column="5" selection-start-line="103" selection-start-column="5" selection-end-line="103" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Util/PdoUtil.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="51" column="26" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
+          <folding>
+            <element signature="e#112#147#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/IndexController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
           <caret line="214" column="50" selection-start-line="214" selection-start-column="50" selection-end-line="214" selection-end-column="50" />
           <folding>
             <element signature="e#123#159#0#PHP" expanded="true" />
-            <marker date="1474910793698" expanded="true" signature="1130:1189" placeholder="SELECT max_c... aa_app" />
-            <marker date="1474910793698" expanded="true" signature="1261:1287" placeholder="SELECT id FR... aa_entities" />
-            <marker date="1474910793698" expanded="true" signature="1261:1309" placeholder="SELECT id FR... aa_entities" />
-            <marker date="1474910793698" expanded="true" signature="1261:1316" placeholder="SELECT id FR... aa_entities" />
-            <marker date="1474910793698" expanded="true" signature="1261:1343" placeholder="SELECT id FR... aa_entities" />
-            <marker date="1474910793698" expanded="true" signature="1410:1465" placeholder="SELECT id FR... aa_entities" />
-            <marker date="1474910793698" expanded="true" signature="1410:1490" placeholder="SELECT id FR... aa_entities" />
-            <marker date="1474910793698" expanded="true" signature="1826:1847" placeholder="DELETE FROM " />
-            <marker date="1474910793698" expanded="true" signature="1990:2023" placeholder="INSERT INTO cc_active... " />
-            <marker date="1474910793698" expanded="true" signature="1990:2048" placeholder="INSERT INTO cc_active... " />
-            <marker date="1474910793698" expanded="true" signature="2308:2366" placeholder="INSERT INTO cc_active... " />
-            <marker date="1474910793698" expanded="true" signature="2730:2882" placeholder="SELECT id, n... aa_entities" />
-            <marker date="1474910793698" expanded="true" signature="3073:3946" placeholder="SELECT * FRO... id" />
-            <marker date="1474910793698" expanded="true" signature="3125:3306" placeholder="SELECT e.id,... " />
-            <marker date="1474910793698" expanded="true" signature="3125:3861" placeholder="SELECT e.id,... aa_entities" />
-            <marker date="1474910793698" expanded="true" signature="3817:3861" placeholder="SELECT e.id,... aa_entities" />
-            <marker date="1474910793698" expanded="true" signature="4479:4602" placeholder="SELECT id, r... aa_entities" />
-            <marker date="1474910793698" expanded="true" signature="4904:4996" placeholder="SELECT FROM bb_points" />
-            <marker date="1474910793698" expanded="true" signature="4904:5025" placeholder="SELECT MAX(i... bb_points" />
-            <marker date="1474910793698" expanded="true" signature="4904:5026" placeholder="SELECT MAX(i... bb_points" />
-            <marker date="1474910793698" expanded="true" signature="5214:5253" placeholder="UPDATE aa_en... " />
-            <marker date="1474910793698" expanded="true" signature="5214:5268" placeholder="UPDATE aa_en... " />
-            <marker date="1474910793698" expanded="true" signature="5214:5290" placeholder="UPDATE aa_en... " />
-            <marker date="1474910793698" expanded="true" signature="5214:5296" placeholder="UPDATE aa_en... " />
-            <marker date="1474910793698" expanded="true" signature="5418:5504" placeholder="SELECT FROM bb_points" />
-            <marker date="1474910793698" expanded="true" signature="5418:5518" placeholder="SELECT MIN()... bb_points" />
-            <marker date="1474910793698" expanded="true" signature="5418:5521" placeholder="SELECT MIN(i... bb_points" />
-            <marker date="1474910793698" expanded="true" signature="5418:5522" placeholder="SELECT MIN(i... bb_points" />
-            <marker date="1474910793698" expanded="true" signature="5698:5737" placeholder="UPDATE aa_en... " />
-            <marker date="1474910793698" expanded="true" signature="5698:5751" placeholder="UPDATE aa_en... " />
-            <marker date="1474910793698" expanded="true" signature="5698:5755" placeholder="UPDATE aa_en... " />
-            <marker date="1474910793698" expanded="true" signature="5698:5783" placeholder="UPDATE aa_en... " />
-            <marker date="1474910793698" expanded="true" signature="5959:6053" placeholder="SELECT lat, bb_points" />
+            <marker date="1474947910631" expanded="true" signature="657:743" placeholder="SELECT state... aa_app" />
+            <marker date="1474947910631" expanded="true" signature="1557:1616" placeholder="SELECT max_c... aa_app" />
+            <marker date="1474947910631" expanded="true" signature="1688:1714" placeholder="SELECT id FR... aa_entities" />
+            <marker date="1474947910631" expanded="true" signature="1688:1736" placeholder="SELECT id FR... aa_entities" />
+            <marker date="1474947910631" expanded="true" signature="1688:1743" placeholder="SELECT id FR... aa_entities" />
+            <marker date="1474947910631" expanded="true" signature="1688:1770" placeholder="SELECT id FR... aa_entities" />
+            <marker date="1474947910631" expanded="true" signature="1837:1892" placeholder="SELECT id FR... aa_entities" />
+            <marker date="1474947910631" expanded="true" signature="1837:1917" placeholder="SELECT id FR... aa_entities" />
+            <marker date="1474947910631" expanded="true" signature="2253:2274" placeholder="DELETE FROM " />
+            <marker date="1474947910631" expanded="true" signature="2417:2450" placeholder="INSERT INTO cc_active... " />
+            <marker date="1474947910631" expanded="true" signature="2417:2475" placeholder="INSERT INTO cc_active... " />
+            <marker date="1474947910631" expanded="true" signature="2735:2793" placeholder="INSERT INTO cc_active... " />
+            <marker date="1474947910631" expanded="true" signature="3157:3309" placeholder="SELECT id, n... aa_entities" />
+            <marker date="1474947910631" expanded="true" signature="3487:4244" placeholder="SELECT * FRO... id" />
+            <marker date="1474947910631" expanded="true" signature="3504:3658" placeholder="SELECT e.id,... " />
+            <marker date="1474947910631" expanded="true" signature="3504:4182" placeholder="SELECT e.id,... aa_entities" />
+            <marker date="1474947910631" expanded="true" signature="3504:4244" placeholder="SELECT e.id,... " />
+            <marker date="1474947910631" expanded="true" signature="4138:4182" placeholder="SELECT e.id,... aa_entities" />
+            <marker date="1474947910631" expanded="true" signature="4862:4894" placeholder="SELECT state... aa_app" />
+            <marker date="1474947910631" expanded="true" signature="5179:5302" placeholder="SELECT id, r... aa_entities" />
+            <marker date="1474947910631" expanded="true" signature="5604:5696" placeholder="SELECT FROM bb_points" />
+            <marker date="1474947910631" expanded="true" signature="5604:5725" placeholder="SELECT MAX(i... bb_points" />
+            <marker date="1474947910631" expanded="true" signature="5604:5726" placeholder="SELECT MAX(i... bb_points" />
+            <marker date="1474947910631" expanded="true" signature="5914:5953" placeholder="UPDATE aa_en... " />
+            <marker date="1474947910631" expanded="true" signature="5914:5968" placeholder="UPDATE aa_en... " />
+            <marker date="1474947910631" expanded="true" signature="5914:5990" placeholder="UPDATE aa_en... " />
+            <marker date="1474947910631" expanded="true" signature="5914:5996" placeholder="UPDATE aa_en... " />
+            <marker date="1474947910631" expanded="true" signature="6118:6204" placeholder="SELECT FROM bb_points" />
+            <marker date="1474947910631" expanded="true" signature="6118:6218" placeholder="SELECT MIN()... bb_points" />
+            <marker date="1474947910631" expanded="true" signature="6118:6221" placeholder="SELECT MIN(i... bb_points" />
+            <marker date="1474947910631" expanded="true" signature="6118:6222" placeholder="SELECT MIN(i... bb_points" />
+            <marker date="1474947910631" expanded="true" signature="6398:6437" placeholder="UPDATE aa_en... " />
+            <marker date="1474947910631" expanded="true" signature="6398:6451" placeholder="UPDATE aa_en... " />
+            <marker date="1474947910631" expanded="true" signature="6398:6455" placeholder="UPDATE aa_en... " />
+            <marker date="1474947910631" expanded="true" signature="6398:6483" placeholder="UPDATE aa_en... " />
+            <marker date="1474947910631" expanded="true" signature="6659:6753" placeholder="SELECT lat, bb_points" />
+            <marker date="1474947910631" expanded="true" signature="7746:7836" placeholder="UPDATE aa_ap... " />
+            <marker date="1474947910631" expanded="true" signature="8241:8275" placeholder="UPDATE aa_ap... " />
+            <marker date="1474947910631" expanded="true" signature="8241:8281" placeholder="UPDATE aa_ap... " />
           </folding>
         </state>
       </provider>
@@ -530,39 +670,45 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#123#159#0#PHP" expanded="true" />
-            <marker date="1474910793698" expanded="true" signature="1130:1189" placeholder="SELECT max_c... aa_app" />
-            <marker date="1474910793698" expanded="true" signature="1261:1287" placeholder="SELECT id FR... aa_entities" />
-            <marker date="1474910793698" expanded="true" signature="1261:1309" placeholder="SELECT id FR... aa_entities" />
-            <marker date="1474910793698" expanded="true" signature="1261:1316" placeholder="SELECT id FR... aa_entities" />
-            <marker date="1474910793698" expanded="true" signature="1261:1343" placeholder="SELECT id FR... aa_entities" />
-            <marker date="1474910793698" expanded="true" signature="1410:1465" placeholder="SELECT id FR... aa_entities" />
-            <marker date="1474910793698" expanded="true" signature="1410:1490" placeholder="SELECT id FR... aa_entities" />
-            <marker date="1474910793698" expanded="true" signature="1826:1847" placeholder="DELETE FROM " />
-            <marker date="1474910793698" expanded="true" signature="1990:2023" placeholder="INSERT INTO cc_active... " />
-            <marker date="1474910793698" expanded="true" signature="1990:2048" placeholder="INSERT INTO cc_active... " />
-            <marker date="1474910793698" expanded="true" signature="2308:2366" placeholder="INSERT INTO cc_active... " />
-            <marker date="1474910793698" expanded="true" signature="2730:2882" placeholder="SELECT id, n... aa_entities" />
-            <marker date="1474910793698" expanded="true" signature="3073:3946" placeholder="SELECT * FRO... id" />
-            <marker date="1474910793698" expanded="true" signature="3125:3306" placeholder="SELECT e.id,... " />
-            <marker date="1474910793698" expanded="true" signature="3125:3861" placeholder="SELECT e.id,... aa_entities" />
-            <marker date="1474910793698" expanded="true" signature="3817:3861" placeholder="SELECT e.id,... aa_entities" />
-            <marker date="1474910793698" expanded="true" signature="4479:4602" placeholder="SELECT id, r... aa_entities" />
-            <marker date="1474910793698" expanded="true" signature="4904:4996" placeholder="SELECT FROM bb_points" />
-            <marker date="1474910793698" expanded="true" signature="4904:5025" placeholder="SELECT MAX(i... bb_points" />
-            <marker date="1474910793698" expanded="true" signature="4904:5026" placeholder="SELECT MAX(i... bb_points" />
-            <marker date="1474910793698" expanded="true" signature="5214:5253" placeholder="UPDATE aa_en... " />
-            <marker date="1474910793698" expanded="true" signature="5214:5268" placeholder="UPDATE aa_en... " />
-            <marker date="1474910793698" expanded="true" signature="5214:5290" placeholder="UPDATE aa_en... " />
-            <marker date="1474910793698" expanded="true" signature="5214:5296" placeholder="UPDATE aa_en... " />
-            <marker date="1474910793698" expanded="true" signature="5418:5504" placeholder="SELECT FROM bb_points" />
-            <marker date="1474910793698" expanded="true" signature="5418:5518" placeholder="SELECT MIN()... bb_points" />
-            <marker date="1474910793698" expanded="true" signature="5418:5521" placeholder="SELECT MIN(i... bb_points" />
-            <marker date="1474910793698" expanded="true" signature="5418:5522" placeholder="SELECT MIN(i... bb_points" />
-            <marker date="1474910793698" expanded="true" signature="5698:5737" placeholder="UPDATE aa_en... " />
-            <marker date="1474910793698" expanded="true" signature="5698:5751" placeholder="UPDATE aa_en... " />
-            <marker date="1474910793698" expanded="true" signature="5698:5755" placeholder="UPDATE aa_en... " />
-            <marker date="1474910793698" expanded="true" signature="5698:5783" placeholder="UPDATE aa_en... " />
-            <marker date="1474910793698" expanded="true" signature="5959:6053" placeholder="SELECT lat, bb_points" />
+            <marker date="1474947910631" expanded="true" signature="657:743" placeholder="SELECT state... aa_app" />
+            <marker date="1474947910631" expanded="true" signature="1557:1616" placeholder="SELECT max_c... aa_app" />
+            <marker date="1474947910631" expanded="true" signature="1688:1714" placeholder="SELECT id FR... aa_entities" />
+            <marker date="1474947910631" expanded="true" signature="1688:1736" placeholder="SELECT id FR... aa_entities" />
+            <marker date="1474947910631" expanded="true" signature="1688:1743" placeholder="SELECT id FR... aa_entities" />
+            <marker date="1474947910631" expanded="true" signature="1688:1770" placeholder="SELECT id FR... aa_entities" />
+            <marker date="1474947910631" expanded="true" signature="1837:1892" placeholder="SELECT id FR... aa_entities" />
+            <marker date="1474947910631" expanded="true" signature="1837:1917" placeholder="SELECT id FR... aa_entities" />
+            <marker date="1474947910631" expanded="true" signature="2253:2274" placeholder="DELETE FROM " />
+            <marker date="1474947910631" expanded="true" signature="2417:2450" placeholder="INSERT INTO cc_active... " />
+            <marker date="1474947910631" expanded="true" signature="2417:2475" placeholder="INSERT INTO cc_active... " />
+            <marker date="1474947910631" expanded="true" signature="2735:2793" placeholder="INSERT INTO cc_active... " />
+            <marker date="1474947910631" expanded="true" signature="3157:3309" placeholder="SELECT id, n... aa_entities" />
+            <marker date="1474947910631" expanded="true" signature="3487:4244" placeholder="SELECT * FRO... id" />
+            <marker date="1474947910631" expanded="true" signature="3504:3658" placeholder="SELECT e.id,... " />
+            <marker date="1474947910631" expanded="true" signature="3504:4182" placeholder="SELECT e.id,... aa_entities" />
+            <marker date="1474947910631" expanded="true" signature="3504:4244" placeholder="SELECT e.id,... " />
+            <marker date="1474947910631" expanded="true" signature="4138:4182" placeholder="SELECT e.id,... aa_entities" />
+            <marker date="1474947910631" expanded="true" signature="4862:4894" placeholder="SELECT state... aa_app" />
+            <marker date="1474947910631" expanded="true" signature="5179:5302" placeholder="SELECT id, r... aa_entities" />
+            <marker date="1474947910631" expanded="true" signature="5604:5696" placeholder="SELECT FROM bb_points" />
+            <marker date="1474947910631" expanded="true" signature="5604:5725" placeholder="SELECT MAX(i... bb_points" />
+            <marker date="1474947910631" expanded="true" signature="5604:5726" placeholder="SELECT MAX(i... bb_points" />
+            <marker date="1474947910631" expanded="true" signature="5914:5953" placeholder="UPDATE aa_en... " />
+            <marker date="1474947910631" expanded="true" signature="5914:5968" placeholder="UPDATE aa_en... " />
+            <marker date="1474947910631" expanded="true" signature="5914:5990" placeholder="UPDATE aa_en... " />
+            <marker date="1474947910631" expanded="true" signature="5914:5996" placeholder="UPDATE aa_en... " />
+            <marker date="1474947910631" expanded="true" signature="6118:6204" placeholder="SELECT FROM bb_points" />
+            <marker date="1474947910631" expanded="true" signature="6118:6218" placeholder="SELECT MIN()... bb_points" />
+            <marker date="1474947910631" expanded="true" signature="6118:6221" placeholder="SELECT MIN(i... bb_points" />
+            <marker date="1474947910631" expanded="true" signature="6118:6222" placeholder="SELECT MIN(i... bb_points" />
+            <marker date="1474947910631" expanded="true" signature="6398:6437" placeholder="UPDATE aa_en... " />
+            <marker date="1474947910631" expanded="true" signature="6398:6451" placeholder="UPDATE aa_en... " />
+            <marker date="1474947910631" expanded="true" signature="6398:6455" placeholder="UPDATE aa_en... " />
+            <marker date="1474947910631" expanded="true" signature="6398:6483" placeholder="UPDATE aa_en... " />
+            <marker date="1474947910631" expanded="true" signature="6659:6753" placeholder="SELECT lat, bb_points" />
+            <marker date="1474947910631" expanded="true" signature="7746:7836" placeholder="UPDATE aa_ap... " />
+            <marker date="1474947910631" expanded="true" signature="8241:8275" placeholder="UPDATE aa_ap... " />
+            <marker date="1474947910631" expanded="true" signature="8241:8281" placeholder="UPDATE aa_ap... " />
           </folding>
         </state>
       </provider>
@@ -589,10 +735,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="155" column="39" selection-start-line="155" selection-start-column="39" selection-end-line="155" selection-end-column="39" />
-          <folding>
-            <element signature="n#style#0;n#span#1;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#div#1;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -646,24 +789,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/broadcasting.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.54915255">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.6666665">
-          <caret line="58" column="52" selection-start-line="58" selection-start-column="52" selection-end-line="58" selection-end-column="52" />
         </state>
       </provider>
     </entry>
@@ -720,90 +849,150 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
+    <entry file="file://$PROJECT_DIR$/resources/views/errors/503.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42711863">
-          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.0">
-          <caret line="21" column="28" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="28" />
-          <folding>
-            <element signature="e#7#457#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="27.333334">
-          <caret line="103" column="5" selection-start-line="103" selection-start-column="5" selection-end-line="103" selection-end-column="5" />
-          <folding>
-            <element signature="n#style#0;n#span#1;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#div#1;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/6deb3cd3-3fe9-4f9c-b96e-b2be170dedcd/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
+        <state vertical-scroll-proportion="-0.61694914">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/markers/driver.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/markers/car.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/webSocket.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2440678">
+          <caret line="23" column="78" selection-start-line="23" selection-start-column="78" selection-end-line="23" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/6deb3cd3-3fe9-4f9c-b96e-b2be170dedcd/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.2">
+          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.518518">
+          <caret line="348" column="37" selection-start-line="348" selection-start-column="37" selection-end-line="348" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/3a8a9b8c-b7f1-4ccf-935c-2ed508339381/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.2">
+          <caret line="2" column="36" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/IndexController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8169491">
-          <caret line="217" column="12" selection-start-line="217" selection-start-column="12" selection-end-line="217" selection-end-column="12" />
+        <state vertical-scroll-proportion="-12.0">
+          <caret line="138" column="49" selection-start-line="138" selection-start-column="49" selection-end-line="138" selection-end-column="49" />
           <folding>
             <element signature="e#123#159#0#PHP" expanded="true" />
-            <marker date="1474910793698" expanded="true" signature="1130:1189" placeholder="SELECT max_c... aa_app" />
-            <marker date="1474910793698" expanded="true" signature="1261:1287" placeholder="SELECT id FR... aa_entities" />
-            <marker date="1474910793698" expanded="true" signature="1261:1309" placeholder="SELECT id FR... aa_entities" />
-            <marker date="1474910793698" expanded="true" signature="1261:1316" placeholder="SELECT id FR... aa_entities" />
-            <marker date="1474910793698" expanded="true" signature="1261:1343" placeholder="SELECT id FR... aa_entities" />
-            <marker date="1474910793698" expanded="true" signature="1410:1465" placeholder="SELECT id FR... aa_entities" />
-            <marker date="1474910793698" expanded="true" signature="1410:1490" placeholder="SELECT id FR... aa_entities" />
-            <marker date="1474910793698" expanded="true" signature="1826:1847" placeholder="DELETE FROM " />
-            <marker date="1474910793698" expanded="true" signature="1990:2023" placeholder="INSERT INTO cc_active... " />
-            <marker date="1474910793698" expanded="true" signature="1990:2048" placeholder="INSERT INTO cc_active... " />
-            <marker date="1474910793698" expanded="true" signature="2308:2366" placeholder="INSERT INTO cc_active... " />
-            <marker date="1474910793698" expanded="true" signature="2730:2882" placeholder="SELECT id, n... aa_entities" />
-            <marker date="1474910793698" expanded="true" signature="3073:3946" placeholder="SELECT * FRO... id" />
-            <marker date="1474910793698" expanded="true" signature="3125:3306" placeholder="SELECT e.id,... " />
-            <marker date="1474910793698" expanded="true" signature="3125:3861" placeholder="SELECT e.id,... aa_entities" />
-            <marker date="1474910793698" expanded="true" signature="3817:3861" placeholder="SELECT e.id,... aa_entities" />
-            <marker date="1474910793698" expanded="true" signature="4479:4602" placeholder="SELECT id, r... aa_entities" />
-            <marker date="1474910793698" expanded="true" signature="4904:4996" placeholder="SELECT FROM bb_points" />
-            <marker date="1474910793698" expanded="true" signature="4904:5025" placeholder="SELECT MAX(i... bb_points" />
-            <marker date="1474910793698" expanded="true" signature="4904:5026" placeholder="SELECT MAX(i... bb_points" />
-            <marker date="1474910793698" expanded="true" signature="5214:5253" placeholder="UPDATE aa_en... " />
-            <marker date="1474910793698" expanded="true" signature="5214:5268" placeholder="UPDATE aa_en... " />
-            <marker date="1474910793698" expanded="true" signature="5214:5290" placeholder="UPDATE aa_en... " />
-            <marker date="1474910793698" expanded="true" signature="5214:5296" placeholder="UPDATE aa_en... " />
-            <marker date="1474910793698" expanded="true" signature="5418:5504" placeholder="SELECT FROM bb_points" />
-            <marker date="1474910793698" expanded="true" signature="5418:5518" placeholder="SELECT MIN()... bb_points" />
-            <marker date="1474910793698" expanded="true" signature="5418:5521" placeholder="SELECT MIN(i... bb_points" />
-            <marker date="1474910793698" expanded="true" signature="5418:5522" placeholder="SELECT MIN(i... bb_points" />
-            <marker date="1474910793698" expanded="true" signature="5698:5737" placeholder="UPDATE aa_en... " />
-            <marker date="1474910793698" expanded="true" signature="5698:5751" placeholder="UPDATE aa_en... " />
-            <marker date="1474910793698" expanded="true" signature="5698:5755" placeholder="UPDATE aa_en... " />
-            <marker date="1474910793698" expanded="true" signature="5698:5783" placeholder="UPDATE aa_en... " />
-            <marker date="1474910793698" expanded="true" signature="5959:6053" placeholder="SELECT lat, bb_points" />
+            <marker date="1474947910631" expanded="true" signature="657:743" placeholder="SELECT state... aa_app" />
+            <marker date="1474947910631" expanded="true" signature="1557:1616" placeholder="SELECT max_c... aa_app" />
+            <marker date="1474947910631" expanded="true" signature="1688:1714" placeholder="SELECT id FR... aa_entities" />
+            <marker date="1474947910631" expanded="true" signature="1688:1736" placeholder="SELECT id FR... aa_entities" />
+            <marker date="1474947910631" expanded="true" signature="1688:1743" placeholder="SELECT id FR... aa_entities" />
+            <marker date="1474947910631" expanded="true" signature="1688:1770" placeholder="SELECT id FR... aa_entities" />
+            <marker date="1474947910631" expanded="true" signature="1837:1892" placeholder="SELECT id FR... aa_entities" />
+            <marker date="1474947910631" expanded="true" signature="1837:1917" placeholder="SELECT id FR... aa_entities" />
+            <marker date="1474947910631" expanded="true" signature="2253:2274" placeholder="DELETE FROM " />
+            <marker date="1474947910631" expanded="true" signature="2417:2450" placeholder="INSERT INTO cc_active... " />
+            <marker date="1474947910631" expanded="true" signature="2417:2475" placeholder="INSERT INTO cc_active... " />
+            <marker date="1474947910631" expanded="true" signature="2735:2793" placeholder="INSERT INTO cc_active... " />
+            <marker date="1474947910631" expanded="true" signature="3157:3309" placeholder="SELECT id, n... aa_entities" />
+            <marker date="1474947910631" expanded="true" signature="3487:4244" placeholder="SELECT * FRO... id" />
+            <marker date="1474947910631" expanded="true" signature="3504:3658" placeholder="SELECT e.id,... " />
+            <marker date="1474947910631" expanded="true" signature="3504:4182" placeholder="SELECT e.id,... aa_entities" />
+            <marker date="1474947910631" expanded="true" signature="3504:4244" placeholder="SELECT e.id,... " />
+            <marker date="1474947910631" expanded="true" signature="4138:4182" placeholder="SELECT e.id,... aa_entities" />
+            <marker date="1474947910631" expanded="true" signature="4862:4894" placeholder="SELECT state... aa_app" />
+            <marker date="1474947910631" expanded="true" signature="5179:5302" placeholder="SELECT id, r... aa_entities" />
+            <marker date="1474947910631" expanded="true" signature="5604:5696" placeholder="SELECT FROM bb_points" />
+            <marker date="1474947910631" expanded="true" signature="5604:5725" placeholder="SELECT MAX(i... bb_points" />
+            <marker date="1474947910631" expanded="true" signature="5604:5726" placeholder="SELECT MAX(i... bb_points" />
+            <marker date="1474947910631" expanded="true" signature="5914:5953" placeholder="UPDATE aa_en... " />
+            <marker date="1474947910631" expanded="true" signature="5914:5968" placeholder="UPDATE aa_en... " />
+            <marker date="1474947910631" expanded="true" signature="5914:5990" placeholder="UPDATE aa_en... " />
+            <marker date="1474947910631" expanded="true" signature="5914:5996" placeholder="UPDATE aa_en... " />
+            <marker date="1474947910631" expanded="true" signature="6118:6204" placeholder="SELECT FROM bb_points" />
+            <marker date="1474947910631" expanded="true" signature="6118:6218" placeholder="SELECT MIN()... bb_points" />
+            <marker date="1474947910631" expanded="true" signature="6118:6221" placeholder="SELECT MIN(i... bb_points" />
+            <marker date="1474947910631" expanded="true" signature="6118:6222" placeholder="SELECT MIN(i... bb_points" />
+            <marker date="1474947910631" expanded="true" signature="6398:6437" placeholder="UPDATE aa_en... " />
+            <marker date="1474947910631" expanded="true" signature="6398:6451" placeholder="UPDATE aa_en... " />
+            <marker date="1474947910631" expanded="true" signature="6398:6455" placeholder="UPDATE aa_en... " />
+            <marker date="1474947910631" expanded="true" signature="6398:6483" placeholder="UPDATE aa_en... " />
+            <marker date="1474947910631" expanded="true" signature="6659:6753" placeholder="SELECT lat, bb_points" />
+            <marker date="1474947910631" expanded="true" signature="7746:7836" placeholder="UPDATE aa_ap... " />
+            <marker date="1474947910631" expanded="true" signature="8241:8275" placeholder="UPDATE aa_ap... " />
+            <marker date="1474947910631" expanded="true" signature="8241:8281" placeholder="UPDATE aa_ap... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.3333333">
+          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.0">
+          <caret line="60" column="46" selection-start-line="60" selection-start-column="46" selection-end-line="60" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45833334">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

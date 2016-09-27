@@ -20,6 +20,8 @@ Route::get('/', function () {
 Route::get("/", "IndexController@index")->name("index");
 Route::match(["get", "post"],"/getEntitiesList", "IndexController@getEntitiesList")->name("entities_list");
 Route::get("/putNextPosition", "IndexController@putNextPosition")->name("put_next_position");
+Route::post("/saveConfig", "IndexController@saveConfig")->name("save_config");
+Route::post("/appState", "IndexController@changeAppState")->name("app_state");
 
 
 

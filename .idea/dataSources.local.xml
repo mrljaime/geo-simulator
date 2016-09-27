@@ -7,5 +7,11 @@
       <schema-pattern>geo-simulator.*</schema-pattern>
       <default-schemas>geo-simulator.*</default-schemas>
     </data-source>
+    <data-source name="MySQL - pbpm@localhost" uuid="3a8a9b8c-b7f1-4ccf-935c-2ed508339381">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>pbpm.*</schema-pattern>
+      <default-schemas>pbpm.*</default-schemas>
+    </data-source>
   </component>
 </project>

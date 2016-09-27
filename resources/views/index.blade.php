@@ -168,21 +168,21 @@
                     <div class="form-row">
                         <label for="clients">Número máximo de clientes</label>
                         <select name="clients" id="clients" class="choice">
-                            <option value="1">Uno</option>
-                            <option value="2">Dos</option>
-                            <option value="3">Tres</option>
-                            <option value="4">Cuatro</option>
-                            <option value="5">Cinco</option>
+                            <option value="1" {{ ($config["max_clients"] == 1) ? 'selected' : '' }}>Uno</option>
+                            <option value="2" {{ ($config["max_clients"] == 2) ? 'selected' : '' }}>Dos</option>
+                            <option value="3" {{ ($config["max_clients"] == 3) ? 'selected' : '' }}>Tres</option>
+                            <option value="4" {{ ($config["max_clients"] == 4) ? 'selected' : '' }}>Cuatro</option>
+                            <option value="5" {{ ($config["max_clients"] == 5) ? 'selected' : '' }}>Cinco</option>
                         </select>
                     </div>
                     <div class="form-row">
-                        <label for="clients">Número máximo de conductores</label>
-                        <select name="clients" id="clients" class="choice">
-                            <option value="1">Uno</option>
-                            <option value="2">Dos</option>
-                            <option value="3">Tres</option>
-                            <option value="4">Cuatro</option>
-                            <option value="5">Cinco</option>
+                        <label for="users">Número máximo de conductores</label>
+                        <select name="users" id="users" class="choice">
+                            <option value="1" {{ ($config["max_users"] == 1) ? 'selected' : '' }}>Uno</option>
+                            <option value="2" {{ ($config["max_users"] == 2) ? 'selected' : '' }}>Dos</option>
+                            <option value="3" {{ ($config["max_users"] == 3) ? 'selected' : '' }}>Tres</option>
+                            <option value="4" {{ ($config["max_users"] == 4) ? 'selected' : '' }}>Cuatro</option>
+                            <option value="5" {{ ($config["max_users"] == 5) ? 'selected' : '' }}>Cinco</option>
                         </select>
                     </div>
                     <div class="form-row">
@@ -190,8 +190,10 @@
                     </div>
                     <div class="delimiter"></div>
                     <div class="form-row" style="margin-top: 5px;">
-                        <button class="btn myButton" id="resumeApp">Reanudar aplicación</button>
-                        <button class="btn myButton" id="stopApp">Pausar aplicación</button>
+                        <button class="btn myButton" id="resumeApp"
+                        {{ ($config["state"] != true)  ? 'disabled' : ''}}>Reanudar aplicación</button>
+                        <button class="btn myButton" id="stopApp"
+                        {{ ($config["state"] == true)  ? 'disabled' : ''}}>Pausar aplicación</button>
                     </div>
                 </div>
             </div>
@@ -248,17 +250,17 @@
 
                 for (var i in data) {
                     var iData = data[i];
-                    var entity = new Entity(iData.id, iData.name, [Number(iData.lat), Number(iData.lng)]);
-                    entities.push(entity);
-                    latLngs.push(entity.latLng);
-                    entity.marker = putMarker(entity.latLng, entity.name);
+                    var entity = new Entity(iData.id, iData.name,
+                            [Number(iData.lat), Number(iData.lng)], null, iData.closest);
 
-                    var closest = iData.closest;
-                    console.log(closest);
-                    var closestEntity = new Entity(closest.id, closest.name, [Number(closest.lat), Number(closest.lng)]);
-                    entities.push(closestEntity);
-                    latLngs.push(closestEntity.latLng);
-                    closestEntity.marker = putMarker(closestEntity.latLng, closestEntity.name);
+                    var marker = putMarker(entity.latLng, entity.name, 0);
+                    entity.marker = marker;
+                    var closestMarker = putMarker([entity.closest.lat, entity.closest.lng], entity.closest.name, 1);
+                    iData.closest.marker = closestMarker;
+
+                    latLngs.push(entity.latLng);
+                    latLngs.push([entity.closest.lat, entity.closest.lng]);
+                    entities.push(entity);
                 }
 
                 map.fitBounds(latLngs);
@@ -273,6 +275,96 @@
     $("#closeModal").click(function() {
         $(".modal").hide();
     });
+    $("#saveConfig").click(function () {
+        $("#saveConfig").attr("disabled", true);
+        $.ajax({
+            url: "{{ URL::route("save_config") }}",
+            type: "post",
+            dataType: "json",
+            data: {
+                _token: "{{ csrf_token() }}",
+                maxClients: $("#clients").val(),
+                maxUsers: $("#users").val(),
+            },
+            complete: function () {
+                $("#saveConfig").prop("disabled", false);
+            },
+            success: function () {
+                refresh();
+                $(".modal").hide();
+                alert("Se ha salvado la configuración");
+            },
+            error: function () {
+                alert("Error de comunicaciones");
+            }
+        });
+    });
+    $("#resumeApp").click(function () {
+        changeState(0);
+    });
+    $("#stopApp").click(function () {
+        changeState(1);
+    })
+
+    function changeState(state) {
+        $.ajax({
+            url: "{{ URL::route("app_state") }}",
+            type: "post",
+            dataType: "json",
+            data: {
+                _token: "{{ csrf_token() }}",
+                state: state
+            },
+            success: function (data) {
+                $(".modal").hide();
+                if (state == 1) {
+                    $("#stopApp").prop("disabled", true);
+                    $("#resumeApp").prop("disabled", false);
+                } else {
+                    $("#stopApp").prop("disabled", false);
+                    $("#resumeApp").prop("disabled", true);
+                }
+            },
+            error: function (xhr) {
+                alert("Error de comunicaciones");
+            }
+        });
+    }
+
+    function refresh() {
+        latLngs = [];
+        table.ajax.reload(function (json) {
+            latLngs = [];
+
+            for (var i in entities) {
+                var iEntity = entities[i];
+                if (iEntity.closest.marker != undefined) {
+                    map.removeLayer(iEntity.closest.marker);
+                }
+                map.removeLayer(iEntity.marker);
+                entities.slice(i, 1);
+            }
+
+            for (var i in json.data) {
+                var iData = json.data[i];
+                var entity = new Entity(iData.id, iData.name,
+                        [Number(iData.lat), Number(iData.lng)], null, iData.closest);
+
+                console.log(entity);
+
+                var marker = putMarker(entity.latLng, entity.name, 0);
+                entity.marker = marker;
+                var closestMarker = putMarker([entity.closest.lat, entity.closest.lng], entity.closest.name, 1);
+                iData.closest.marker = closestMarker;
+
+                latLngs.push(entity.latLng);
+                latLngs.push([entity.closest.lat, entity.closest.lng]);
+                entities.push(entity);
+            }
+
+
+        }, false);
+    }
 
 </script>
 
@@ -286,18 +378,33 @@
 
 </script>
 <script>
-    var Entity = function(id, name, latLng, marker) {
+    var Entity = function(id, name, latLng, marker, closest) {
         this.id = id;
         this.name = name;
         this.latLng = latLng;
         this.marker = marker;
+        this.closest = closest;
     }
 
     var entities = [];
     var latLngs = [];
 
-    function putMarker(latLng, description) {
+    function putMarker(latLng, description, type) {
+        var icon = null;
+        if (type == 0) {
+            icon = new L.Icon({
+                iconUrl: "{{ URL::asset("images/markers/driver.png") }}",
+                iconSize: [32, 37]
+            });
+        } else {
+            icon = new L.Icon({
+                iconUrl: "{{ URL::asset("images/markers/car.png") }}",
+                iconSize: [32, 37]
+            });
+        }
+
         var marker = new L.Marker(latLng).addTo(map);
+        marker.setIcon(icon);
         marker.bindPopup(description);
         return marker;
     }
@@ -315,7 +422,7 @@
             }
         }
 
-        table.ajax.reload();
+        refresh();
     });
 </script>
 </html>

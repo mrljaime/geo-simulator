@@ -11,17 +11,31 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Util\PdoUtil;
 use Illuminate\Auth\EloquentUserProvider;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\View;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 
 class IndexController extends Controller
 {
     public function index()
     {
-        return view("index");
+        $conn = DB::connection()->getPdo();
+        $stmt = "
+        SELECT
+          state,
+          max_clients,
+          max_users
+        FROM aa_app
+        "; $config = PdoUtil::selectSingleOrNullPrepared($conn, $stmt);
+
+        return view("index", array(
+            "config" => $config
+        ));
     }
 
     /**
@@ -103,27 +117,26 @@ class IndexController extends Controller
         foreach ($clients as $key => $value) {
 
             $stmt = "
-            SELECT *
-                FROM (
-                    SELECT
-                      e.id,
-                      name,
-                      p.lat,
-                      p.lng,
-                      FORMAT(111 * DEGREES(ACOS(COS(RADIANS({$value["lat"]}))*COS(RADIANS(p.lat))
-                                         * COS(RADIANS({$value["lng"]} - p.lng))+SIN(RADIANS({$value["lat"]}))
-                                                                                      * SIN(RADIANS(p.lat))))*1000, 1) as distance
-                    FROM aa_entities e
-                      JOIN bb_routes r ON (e.route_id = r.id)
-                      JOIN bb_points p ON (e.last_point_id = p.id AND r.id = p.route_id)
-                    WHERE entity_type = 1
-                    AND e.id IN ($userKeys)
-                ) e
-                ORDER BY e.distance DESC
+                SELECT
+                  e.id,
+                  name,
+                  p.lat,
+                  p.lng,
+                  111 * DEGREES(ACOS(COS(RADIANS({$value["lat"]}))*COS(RADIANS(p.lat))
+                                      * COS(RADIANS({$value["lng"]} - p.lng))+SIN(RADIANS({$value["lat"]}))
+                                      * SIN(RADIANS(p.lat))))*1000
+                                      as distance
+                FROM aa_entities e
+                  JOIN bb_routes r ON (e.route_id = r.id)
+                  JOIN bb_points p ON (e.last_point_id = p.id AND r.id = p.route_id)
+                WHERE   entity_type = 1
+                AND     e.id IN ($userKeys)
+                ORDER BY distance ASC
                 LIMIT 1
             ";
 
             $closest = PdoUtil::selectPrepared($conn, $stmt)[0];
+            $closest["distance"] = number_format($closest["distance"], 2, ".", ",");
 
             $clients[$key]["closest"] = $closest;
         }
@@ -141,6 +154,21 @@ class IndexController extends Controller
     public function putNextPosition(Request $request)
     {
         $conn = DB::connection()->getPdo();
+
+        $stmt = "
+        SELECT state
+        FROM aa_app
+        "; $state = PdoUtil::selectSingleOrNullPrepared($conn, $stmt);
+        if (is_null($state)) {
+            abort(503);
+        }
+
+        $state = $state["state"];
+
+        /** On Pause */
+        if ($state == 1) {
+            abort(503);
+        }
 
         $stmt = "
         SELECT
@@ -209,16 +237,53 @@ class IndexController extends Controller
                 "lat={$thisPoint["lat"]}&lng={$thisPoint["lng"]}&id=$id");
 
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-
-            $server_output = curl_exec($ch);
-
+            curl_exec($ch);
             curl_close($ch);
-
-            Log::info(var_export($server_output));
-            sleep(3);
         }
 
+        return response()->json(array(
+            "code" => 200
+        ));
+    }
 
+    public function saveConfig(Request $request)
+    {
+        $conn = DB::connection()->getPdo();
+        $maxClients = $request->input("maxClients");
+        $maxUsers = $request->input("maxUsers");
 
+        if (0 == strlen(trim($maxClients)) || 0 == strlen(trim($maxUsers))) {
+            throw new NotFoundHttpException();
+        }
+
+        $stmt = "
+        UPDATE aa_app
+        SET   max_clients = :maxClients,
+              max_users = :maxUsers
+        "; PdoUtil::executePrepared($conn, $stmt, array(
+            "maxClients" => $maxClients,
+            "maxUsers" => $maxUsers
+        ));
+
+        return response()->json(array(
+            "code" => 200
+        ));
+    }
+
+    public function changeAppState(Request $request)
+    {
+        $conn = DB::connection()->getPdo();
+        $state = $request->input("state");
+
+        $stmt = "
+        UPDATE aa_app
+        SET state = :state
+        "; PdoUtil::executePrepared($conn, $stmt, array(
+            "state" => $state
+        ));
+
+        return response()->json(array(
+            "state" => $state
+        ));
     }
 }

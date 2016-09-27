@@ -14,12 +14,11 @@ app.all("/pushNotification", function (req, res) {
     for (var i in clients) {
         var iClient = clients[i];
         iClient.emit("reload",
-            {
-                canReload: true,
+            {   canReload: true,
                 id: req.body.id,
                 lat: req.body.lat,
-                lng: req.body.lng
-            });
+                lng: req.body.lng   }
+        );
     }
 
     res.setHeader('Content-Type', 'application/json');

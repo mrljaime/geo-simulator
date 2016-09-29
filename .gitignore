@@ -9,4 +9,6 @@ Homestead.json
 .idea/dataSources.local.xml
 .idea/dataSources.xml
 .idea/workspace.xml
-
+.env
+.idea/workspace.xml
+config/database.php

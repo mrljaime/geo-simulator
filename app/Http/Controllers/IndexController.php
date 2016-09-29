@@ -155,6 +155,12 @@ class IndexController extends Controller
     {
         $conn = DB::connection()->getPdo();
 
+        /********************
+        * BEGIN TRANSACTION
+        ********************/
+        $conn->beginTransaction();
+
+
         $stmt = "
         SELECT state
         FROM aa_app
@@ -162,6 +168,12 @@ class IndexController extends Controller
         if (is_null($state)) {
             abort(503);
         }
+
+        /********************
+        * BEGIN TRANSACTION
+        ********************/
+        $conn->commit();
+
 
         $state = $state["state"];
 

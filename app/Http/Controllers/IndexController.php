@@ -70,6 +70,7 @@ class IndexController extends Controller
 
         /** I consider more efficient that delete when id are not in id's and then make a upsert.
          *  That's because I prefer delete all and the insert each entity
+         * I test the querys, and in fact, this one is more efficient
          */
         PdoUtil::executePrepared($conn, "DELETE FROM cc_active");
 
@@ -116,6 +117,12 @@ class IndexController extends Controller
         $userKeys = implode(",", $userKeys);
         foreach ($clients as $key => $value) {
 
+            /********************
+            * WARNING:
+            * This has an in condition, in a prod enviroment and wihout simulator
+            * is so dangerous in a transactional table, even, with more that 10000 rows
+            ********************/
+
             $stmt = "
                 SELECT
                   e.id,
@@ -160,7 +167,6 @@ class IndexController extends Controller
         ********************/
         $conn->beginTransaction();
 
-
         $stmt = "
         SELECT state
         FROM aa_app
@@ -173,7 +179,6 @@ class IndexController extends Controller
         * BEGIN TRANSACTION
         ********************/
         $conn->commit();
-
 
         $state = $state["state"];
 

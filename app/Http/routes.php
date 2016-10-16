@@ -22,6 +22,10 @@ Route::match(["get", "post"],"/getEntitiesList", "IndexController@getEntitiesLis
 Route::get("/putNextPosition", "IndexController@putNextPosition")->name("put_next_position");
 Route::post("/saveConfig", "IndexController@saveConfig")->name("save_config");
 Route::post("/appState", "IndexController@changeAppState")->name("app_state");
+Route::get("/entities", "EntitiesController@index")->name("entities");
+Route::get("/entitiesList", "EntitiesController@getEntities")->name("entities_rows");
+Route::get("/entities/{id}/edit", "EntitiesController@editEntities")->name("entities_edit");
+Route::put("/entities/{id}/edit", "EntitiesController@editEntities")->name("entities_edit");
 
 
 

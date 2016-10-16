@@ -15,8 +15,9 @@
         font-family: 'Slabo 27px', serif;
         font-size: 12pt;
     }
-    .config {
-        background-color: #3ba9a6;
+    .header {
+        background-color: #0B6758;
+        color: white;
         -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.69);
         -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.69);
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.69);
@@ -35,7 +36,7 @@
         line-height: 60%;
     }
     .content {
-        height: calc(100% - 60px);
+        height: calc(100vh - 60px);
         width: 100%;
     }
     .left-panel {
@@ -110,6 +111,10 @@
         margin-top: 35px;
         width: 100%;
     }
+    #googleMap {
+        width: 100%;
+        height: 100vh;
+    }
 
     @media screen and (max-width: 520px) {
         .left-panel {
@@ -128,7 +133,8 @@
 
 </style>
 <body>
-    <div class="config">
+<header>
+    <div class="header">
         <nav>
             <div class="nav">
                 <span style="font-size: 1.5em; box-shadow: none;">Geo Simulator</span>
@@ -140,6 +146,7 @@
             </div>
         </nav>
     </div>
+</header>
     <div class="content">
         <div class="left-panel">
             <div class="table-container">
@@ -194,10 +201,14 @@
                         {{ ($config["state"] != true)  ? 'disabled' : ''}}>Reanudar aplicación</button>
                         <button class="btn myButton" id="stopApp"
                         {{ ($config["state"] == true)  ? 'disabled' : ''}}>Pausar aplicación</button>
+                        <button class="btn myButton" id="editEntities">Editar entidades</button>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+
+    <div style="clear: both; margin-top: 20px;" id="googleMap">
 
     </div>
 
@@ -208,6 +219,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.8/socket.io.js"></script>
 {{-- Here's where table come with the data --}}
 <script>
+    $("#editEntities").click(function () {
+        window.open("{{ URL::route("entities") }}", "Entidades");
+    });
+
     var table;
     $(function () {
         table = $("#grid").DataTable({
@@ -425,4 +440,25 @@
         refresh();
     });
 </script>
+
+{{-- Here's where I change leaftlet for google maps API --}}
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASUGVsb9Pi-w167QDPMyiWbHhGxFhj_xU&callback=mapInstance"
+        async defer></script>
+<script src="{{ URL::asset("js/main.js") }}"></script>
+
+<script>
+    var googleMap = null;
+    var mapUses = new MapUses();
+    function mapInstance() {
+        googleMap = new google.maps.Map(document.getElementById('googleMap'), {
+            center: {lat: 23.634501, lng: -102.552784},
+            zoom: 5
+        });
+
+        var icon = "{{ URL::asset("images/markers/driver.png") }}";
+        var marker = mapUses.addMarker(googleMap, {lat: 23.634501, lng: -102.552784}, icon, "Jaime", false);
+
+    }
+</script>
+
 </html>

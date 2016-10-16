@@ -1,0 +1,125 @@
+* {
+    font-family: 'Slabo 27px', serif;
+    font-size: 12pt;
+}
+.header {
+    background-color: #0B6758;
+    color: white;
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.69);
+    -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.69);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.69);
+    height: 60px;
+    font-size: 1.5em;
+    line-height: 60px;
+    width: 100%;
+}
+.nav {
+    margin-left: 10px;
+    vertical-align: middle;
+}
+.right-nav {
+    box-shadow: none;
+    float: right !important;
+    line-height: 60%;
+}
+.content {
+    height: calc(100vh - 60px);
+    width: 100%;
+}
+.left-panel {
+    background-color: #ffffff;
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+    display: inline-block;
+    height: 100%;
+    vertical-align: top;
+    width: 30%;
+    overflow-y: scroll;
+}
+.rigth-panel {
+    display: inline-block;
+    height: 100%;
+    position: relative;
+    vertical-align: top;
+    width: calc(70% - 4px);
+}
+.map {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.table-container {
+    padding-top: 5px;
+    height: 100%;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    padding: 0;
+}
+.modal {
+    background-color: rgba(0, 0, 0, 0.56);
+    height: 100%;
+    width: 100%;
+    z-index: 999999;
+    display: none;
+}
+.modal-content {
+    width: 35%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+}
+.form-row {
+    clear: both;
+    margin-bottom: 5px;
+}
+.form-row label {
+    display: block;
+}
+.choice {
+    width: 50%;
+    border-radius: .2em;
+    background-color: white;
+}
+.myButton {
+    border-radius: .2em !important;
+    background-color: transparent;
+    border: solid 1px black;
+    transition: all .3s;
+}
+.myButton:hover {
+    background-color: #13B399;
+}
+.delimiter {
+    border: solid 1px black;
+    margin-top: 35px;
+    width: 100%;
+}
+#googleMap {
+    width: 100%;
+    height: 100vh;
+}
+.none {
+    display: none;
+}
+tr.selected {
+    background-color: #49B3A2 !important;
+}
+
+@media screen and (max-width: 520px) {
+    .left-panel {
+        display: none;
+    }
+    .rigth-panel {
+        width: 100%;
+    }
+    .modal-content {
+        width: 75%;
+    }
+    .choice {
+        width: 75%;
+    }
+    .myButton {
+        margin-top: 5px;
+    }
+}

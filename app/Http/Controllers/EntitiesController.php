@@ -37,7 +37,7 @@ class EntitiesController extends Controller
          *      This query is build in that way to avoid this:
          *      $entities = Entities::all();
          *      Because when we do a "$entities->route->something" we're doing lazy loading.
-         *      So, in that way we're making a unnecessary query every time that get the route
+         *      So, in that way we're making an unnecessary query every time that get the route
          *******************************/
 
         $entities = DB::table("aa_entities")
@@ -98,7 +98,11 @@ class EntitiesController extends Controller
             $name = $request->input("name");
             $lat = $request->input("lat");
             $lng = $request->input("lng");
+            $route = $request->input("routeId");
 
+            if ($entity->entity_type == 1) {
+                $entity->route_id = $route;
+            }
             $entity->name = $name;
             $entity->lat = $lat;
             $entity->lng = $lng;
@@ -116,6 +120,23 @@ class EntitiesController extends Controller
             "entity" => $entity,
             "title" => $entity->name,
             "routes" => $routes,
+        ));
+    }
+
+    /**
+     * JSON response
+     */
+    public function getRoutePoints($id)
+    {
+        $points = DB::table("bb_routes")
+            ->join("bb_points", "bb_routes.id", "=", "bb_points.route_id")
+            ->select("bb_points.id", "bb_points.lat", "bb_points.lng")
+            ->where("bb_routes.id", "=", $id)
+            ->orderBy("bb_points.id", "asc")
+            ->get();
+
+        return response()->json(array(
+            "points" => $points
         ));
     }
 }

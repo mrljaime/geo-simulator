@@ -18,3 +18,17 @@ MapUses.prototype.addMarker = function(map, latLng, icon, title, draggable) {
 
     return marker;
 };
+
+MapUses.prototype.addPolyline = function(map, latLngs, color) {
+    var polyline = new google.maps.Polyline({
+        path: latLngs,
+        geodesic: true,
+        strokeColor: color,
+        strokeOpacity: 1.0,
+        strokeWeight: 5
+    });
+
+    polyline.setMap(map);
+
+    return polyline;
+};

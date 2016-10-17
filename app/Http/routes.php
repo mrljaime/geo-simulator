@@ -26,6 +26,7 @@ Route::get("/entities", "EntitiesController@index")->name("entities");
 Route::get("/entitiesList", "EntitiesController@getEntities")->name("entities_rows");
 Route::get("/entities/{id}/edit", "EntitiesController@editEntities")->name("entities_edit");
 Route::put("/entities/{id}/edit", "EntitiesController@editEntities")->name("entities_edit");
+Route::get("/route/{id}/points", "EntitiesController@getRoutePoints")->name("route_points");
 
 
 

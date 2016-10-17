@@ -39,16 +39,13 @@
         </form>
     </div>
 
-    @if ($entity->entity_type == 0)
-        <div id="googleMap" style="width: 100%; height: 320px;"></div>
-    @endif
+    <div id="googleMap" style="width: 100%; height: 320px;"></div>
 
 @endsection
 @section("script")
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASUGVsb9Pi-w167QDPMyiWbHhGxFhj_xU&callback=mapInstance"
+            async defer></script>
     @if ($entity->entity_type == 0)
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASUGVsb9Pi-w167QDPMyiWbHhGxFhj_xU&callback=mapInstance"
-                async defer></script>
-
         <script>
             var map;
             var latLng = {lat: {{ $entity->lat }}, lng: {{ $entity->lng }}};
@@ -80,6 +77,75 @@
 
         </script>
 
+    @endif
+    @if ($entity->entity_type == 1)
+        <script>
+            var getRoutePointsUrl = "{{ URL::route("route_points", ["__ID__"]) }}";
+            var mapUses = new MapUses();
+            var polyLatLngs = [];
+            var polyline = null;
+            var map;
+
+
+
+
+            $(function () {
+                var route = $("#routeId").val();
+                getRoutePoints(route);
+
+
+                function getRoutePoints(routeId) {
+                    $.ajax({
+                        url: getRoutePointsUrl.replace("__ID__", routeId),
+                        dataType: "json",
+                        success: function(data) {
+                            if (data.points.length == 0) {
+                                return;
+                            }
+
+                            var bounds = new google.maps.LatLngBounds();
+
+                            for (var i in data.points) {
+                                var iPoint = data.points[i];
+                                polyLatLngs.push({
+                                    lat: Number(iPoint.lat),
+                                    lng: Number(iPoint.lng)
+                                });
+                                bounds.extend({
+                                    lat: Number(iPoint.lat),
+                                    lng: Number(iPoint.lng)
+                                });
+                            }
+
+                            map.fitBounds(bounds);
+
+                            polyline = mapUses.addPolyline(map, polyLatLngs, "black");
+                        },
+                        error: function(xhr) {
+                            console.log(xhr);
+                        }
+                    });
+                }
+
+                $("#routeId").change(function () {
+                    if (polyline != null) {
+                        polyline.setMap(null);
+                    }
+                    var route = $("#routeId").val();
+                    getRoutePoints(route);
+
+                });
+            });
+
+
+            function mapInstance() {
+                map = new google.maps.Map(document.getElementById('googleMap'), {
+                    center: {lat: 0, lng: 0},
+                    zoom: 10,
+                    disableDoubleClickZoom: true
+                });
+            }
+        </script>
     @endif
 @endsection
 

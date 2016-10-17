@@ -112,8 +112,6 @@
         var id = $(this).find(".id").attr("data-id");
 
         $("#iframe").attr("src", editEntities.replace("__ID__", id) );
-
-        console.log(id);
     })
 </script>
 </html>

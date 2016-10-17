@@ -87,8 +87,6 @@
             var map;
 
 
-
-
             $(function () {
                 var route = $("#routeId").val();
                 getRoutePoints(route);
@@ -130,6 +128,8 @@
                 $("#routeId").change(function () {
                     if (polyline != null) {
                         polyline.setMap(null);
+                        polyline = null;
+                        polyLatLngs = [];
                     }
                     var route = $("#routeId").val();
                     getRoutePoints(route);

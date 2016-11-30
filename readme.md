@@ -40,7 +40,8 @@ And then, three more steps to make this shit work (That I think):
         node/nodejs webSocket.js
         
 Thank you!
-This project will be better in a couple days. I like it.
+I make this change to remind me that I will do this for an app and the server side implementation
+for web sockets will be write in Java.
 
 Cheers.
 Jaime.

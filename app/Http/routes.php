@@ -29,5 +29,21 @@ Route::put("/entities/{id}/edit", "EntitiesController@editEntities")->name("enti
 Route::get("/route/{id}/points", "EntitiesController@getRoutePoints")->name("route_points");
 
 
+/**
+ * New simulator
+ */
+Route::get("/home", "HomeController@index")->name("home");
+//Route::get("/config", "ConfigController@index")->name("config");
+
+/**
+ * New Simulator API
+ */
+Route::group(["prefix" => "simulator/api"], function() {
+    Route::get("/config", "ConfigController@index")->name("config");
+    Route::put("/config/update", "ConfigController@update")->name("config.update");
+
+    Route::get("/entities", "EntitiesController@entities")->name("entities");
+
+});
 
 

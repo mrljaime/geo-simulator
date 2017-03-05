@@ -1,0 +1,44 @@
+<h5 class="center">Entities</h5>
+<div class="row">
+    <div class="col s12 m4 l4 z-depth-4" style="height: calc(95vh - 91px) !important; overflow-x: scroll;">
+        <table class="responsive-table highlight">
+            <thead>
+            <tr>
+                <th style="width: 33%;">Nombre</th>
+                <th style="width: 33%;">Tipo</th>
+                <th style="width: 33%;">Route</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="entity in entities track by entity.id">
+                <td>{{ entity.name }}</td>
+                <td ng-show="entity.entity_type == 1">Car</td>
+                <td ng-show="entity.entity_type == 0">Driver</td>
+                <td ng-show="entity.route_id != null">{{ entity.route }}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col s12 m8 l8" style="height: calc(95vh - 91px)">
+        <div style="width: 100%; height: 100%;" id="map"></div>
+    </div>
+</div>
+
+<script>
+    function initMap() {
+        console.log("Callback");
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 4,
+            center: uluru
+        });
+        var marker = new google.maps.Marker({
+            position: uluru,
+            map: map
+        });
+    }
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCb32sAexS9sdew6FUwoOPBoJZisebTEz4&callback=initMap">
+</script>
+

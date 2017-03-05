@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html ng-app="SimulatorApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simulator</title>
+    <!-- css -->
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <!-- END css -->
+
+    <!-- jquery -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <!-- END jquery -->
+
+    <!-- materialize js -->
+    <script src="js/materialize.min.js"></script>
+    <!-- END materialize js -->
+
+    <!-- angular core -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
+    <script src="js/app/app.js"></script>
+    <script src="js/app/controller/ConfigController.js"></script>
+    <script src="js/app/controller/EntitiesController.js"></script>
+    <!-- END angular core -->
+
+</head>
+<body ng-controller="ConfigController">
+<style>
+    body, html {
+        height: 100%;
+    }
+</style>
+<div style="position: absolute; top: 50%; right: 50%; z-index: 10000 !important;" id="loader">
+    <div class="preloader-wrapper big active">
+        <div class="spinner-layer spinner-blue-only">
+            <div class="circle-clipper left">
+                <div class="circle"></div>
+            </div><div class="gap-patch">
+            <div class="circle"></div>
+        </div><div class="circle-clipper right">
+            <div class="circle"></div>
+        </div>
+        </div>
+    </div>
+</div>
+<nav>
+    <div class="nav-wrapper">
+        <a href="#/" class="brand-logo center">Mobile Car</a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse">
+            <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+        </a>
+        <ul class="right hide-on-med-and-down">
+            <li ng-class="section == 'map' ? 'active' : ''"><a href="#/">Map</a></li>
+            <li ng-class="section == 'entities' ? 'active' : ''"><a href="#/entities">Entities</a></li>
+            <li><a href="#">Route creator</a></li>
+            <li><a href="#" class="oConfigModal" ng-click="loadConfig()">Config</a></li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+            <li><a href="sass.html">Sass</a></li>
+            <li><a href="#/entities">Entities</a></li>
+            <li><a href="#">Route creator</a></li>
+            <li><a class="oConfigModal" ng-click="loadConfig()">Config</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- config modal -->
+<div id="configModal" class="modal">
+    <form name="theForm">
+        <div class="modal-content">
+            <h4>Configuration</h4>
+            <div class="row">
+                <div class="input-field col s6">
+                    <input id="maxNumberCars" type="number" class="validate active" name="cars" min="1"
+                           ng-model="config.config.maxCars" ng-max="config.maxCars">
+                    <label for="maxNumberCars">Max Number Cars</label>
+                    <span ng-show="!theForm.cars.$valid">
+                        The max number cars has been exceeded ({{ config.maxCars }})
+                    </span>
+                </div>
+                <div class="input-field col s6">
+                    <input id="maxNumberDrivers" type="number" class="validate active" name="drivers" min="1"
+                           ng-model="config.config.maxDrivers" ng-max="config.maxDrivers" ng-max="config.maxDrivers">
+                    <label for="maxNumberDrivers">Max Number Drivers</label>
+                    <span ng-show="!theForm.drivers.$valid">
+                        The max number drivers has been exceeded ({{ config.maxDrivers }})
+                    </span>
+                </div>
+            </div>
+            <div class="row">
+                <label>Stop</label>
+                <div class="switch">
+                    <label>
+                        Off
+                        <input id="state" type="checkbox" class="active" name="state" ng-model="config.config.state"
+                               ng-checked="config.config.state">
+                        <span class="lever"></span>
+                        On
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a href="" class="modal-action waves-effect waves-green btn-flat" ng-click="saveConfig()">Agree</a>
+        </div>
+    </form>
+</div>
+<!-- END config modal -->
+
+<div ng-view></div>
+
+<!-- script -->
+<script>
+    $(function() {
+        $(".button-collapse").sideNav();
+        $('.modal').modal();
+
+        $(".oConfigModal").click(function(e) {
+            e.preventDefault();
+        });
+    });
+</script>
+<!-- END script -->
+</body>
+</html>

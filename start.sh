@@ -3,7 +3,7 @@
 echo -n "enter database username: "
 read username
 echo -n "enter database password: "
-read password
+read -s password
 
 mysql -u $username -p$password -e 'CREATE DATABASE geo_simulator;'
 mysql -u $username -p$password -b geo_simulator < geo_simulator.sql

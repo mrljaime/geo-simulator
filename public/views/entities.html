@@ -1,44 +1,132 @@
 <h5 class="center">Entities</h5>
 <div class="row">
-    <div class="col s12 m4 l4 z-depth-4" style="height: calc(95vh - 91px) !important; overflow-x: scroll;">
+    <div class="col s12 m4 l4 z-depth-1">
         <table class="responsive-table highlight">
             <thead>
             <tr>
-                <th style="width: 33%;">Nombre</th>
-                <th style="width: 33%;">Tipo</th>
+                <th style="width: 33%;">Name</th>
+                <th style="width: 33%;">Type</th>
                 <th style="width: 33%;">Route</th>
             </tr>
             </thead>
             <tbody>
-            <tr ng-repeat="entity in entities track by entity.id">
+            <tr ng-repeat="entity in entities track by entity.id" ng-click="getEntity(entity.id)">
                 <td>{{ entity.name }}</td>
-                <td ng-show="entity.entity_type == 1">Car</td>
-                <td ng-show="entity.entity_type == 0">Driver</td>
+                <td ng-show="entity.entity_type == 1">Driver</td>
+                <td ng-show="entity.entity_type == 0">Car</td>
                 <td ng-show="entity.route_id != null">{{ entity.route }}</td>
             </tr>
             </tbody>
         </table>
     </div>
-    <div class="col s12 m8 l8" style="height: calc(95vh - 91px)">
-        <div style="width: 100%; height: 100%;" id="map"></div>
+    <div class="col s12 m8 l8">
+        <div ng-show="showEdit">
+            <form ng-submit="entityUpdate()" id="editForm">
+                <div class="row">
+                    <div class="input-field col s12 m6 l6">
+                        <span>Name</span>
+                        <input type="text" name="name" id="name" class="active" ng-model="entity.name">
+                    </div>
+                    <div class="input-field col s12 m6 l6">
+                        <span>Entity Type</span>
+                        <select name="entityType" id="entityType" ng-model="entity.entity_type"
+                                class="browser-default active">
+                            <option ng-repeat="option in entityTypeOptions"
+                                    ng-selected="option.id == entity.entity_type"
+                                    ng-value="option.id">{{option.name}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row" ng-if="entity.entity_type == 1">
+                    <div class="input-field col s12 m6 l6">
+                        <span>Route</span>
+                        <select name="route" id="route" ng-model="entity.route_id" class="browser-default"
+                                ng-change="changeRoute()">
+                            <option ng-repeat="route in routes"
+                                    ng-selected="route.id == entity.route_id"
+                                    ng-value="route.id">{{route.name}}</option>
+                            <option value="new">New route</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <input type="hidden" name="lat" id="lat" ng-model="entity.lat" ng-value="entity.lat">
+                    <input type="hidden" name="lng" id="lng" ng-model="entity.lng" ng-value="entity.lng">
+                </div>
+                <div class="row">
+                    <div id="map" style="width: 100%; height: 300px;"></div>
+                </div>
+                <div class="row">
+                    <button type="submit" class="btn">Save</button>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
-
 <script>
+    $(document).ready(function() {
+        $("select").material_select();
+        Materialize.updateTextFields();
+    });
+</script>
+
+<!-- Map stuff -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCb32sAexS9sdew6FUwoOPBoJZisebTEz4&callback=initMap"
+async defer></script>
+<script>
+    var lat, lng, $map;
+
+
     function initMap() {
-        console.log("Callback");
-        var uluru = {lat: -25.363, lng: 131.044};
-        var map = new google.maps.Map(document.getElementById("map"), {
-            zoom: 4,
-            center: uluru
-        });
-        var marker = new google.maps.Marker({
-            position: uluru,
-            map: map
+        lat = $("#lat").val();
+        lng = $("#lng").val();
+
+        $map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: -34.397, lng: 150.644},
+            scrollwheel: false,
+            zoom: 12
         });
     }
-</script>
-<script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCb32sAexS9sdew6FUwoOPBoJZisebTEz4&callback=initMap">
-</script>
 
+
+    function handleMap() {
+
+        setMarker();
+    }
+</script>
+<script>
+    window.lat = null;
+    window.lng = null;
+
+    var marker, polyline;
+    marker = undefined;
+    polyline = undefined;
+
+    window.handleMap = function() {
+        setTimeout(function() {
+            google.maps.event.trigger($map, "resize");
+            setCenter();
+            setMarker();
+        }, 300);
+    };
+
+    function setCenter() {
+        var lat = window.lat, lng = window.lng;
+        $map.setCenter({lat: lat, lng: lng});
+    }
+
+    function setMarker() {
+        var lat = window.lat, lng = window.lng;
+
+        if (marker === undefined) {
+            marker = new google.maps.Marker({
+                position: {lat: lat, lng: lng},
+                map: $map
+            });
+        } else {
+            marker.setPosition({lat: lat, lng: lng});
+        }
+
+    }
+
+</script>
